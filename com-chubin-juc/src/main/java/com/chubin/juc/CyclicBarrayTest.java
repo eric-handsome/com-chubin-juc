@@ -28,9 +28,6 @@ public class CyclicBarrayTest implements  Runnable {
              threadPool.execute(()->{
                  try {
                      System.out.println(Thread.currentThread().getName()+"is waiting");
-                     if(i ==3){
-                         throw new Exception("线程被中断");
-                     }
                      cyclicBarrier1.await();
                      System.out.println(Thread.currentThread().getName()+"is working1");
                      cyclicBarrier1.await();
